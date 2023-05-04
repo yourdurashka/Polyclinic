@@ -1,0 +1,1 @@
+select count(*) from orders_list where year(date_visit) = '$Byear' and month(date_visit) = '$Bmonth' and doc_name = '$Dname'

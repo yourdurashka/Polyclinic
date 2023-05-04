@@ -1,0 +1,17 @@
+{
+  "director": [
+    "bp_report",
+    "bp_query"
+  ],
+  "manager": [
+    "bp_report.otchet1",
+    "bp_report.doc",
+    "bp_report.otchet2"
+  ],
+  "doctor": [
+    "bp_report.pac"
+  ],
+  "pacient": [
+    "blueprint_market"
+  ]
+}

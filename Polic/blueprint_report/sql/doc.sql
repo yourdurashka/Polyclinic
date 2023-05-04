@@ -1,0 +1,1 @@
+select doc_name, spec, address_doc, passport_doc, birth_doc, data_start, data_end from doctor where doc_name='$input_name'

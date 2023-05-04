@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню запросов</title>
+</head>
+<body>
+<center>
+    <h2> Меню запросов </h2>
+    <a href = {{url_for('bp_report.otchet1')}}>Запрос на отчет о пациентах врача</a>
+    <br><br><br>
+    <a href = {{url_for('bp_report.pac')}}>Поиск информации о пациенте</a>
+    <br><br><br>
+    <a href = {{url_for('bp_report.doc')}}>Поиск информации о враче</a>
+    <br><br><br>
+    <a href = {{url_for('bp_report.otchet2')}}>Запрос на отчет о информации приемов</a>
+    <br><br><br>
+    <a href="{{url_for('menu_choice')}}"> Нажмите для возврата в главное меню</a>
+</center>
+</body>
+</html>

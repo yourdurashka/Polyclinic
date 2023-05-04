@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск пациента</title>
+    <link type="text/css" rel="stylesheet" href="static/sem2.css">
+</head>
+<body>
+<center>
+    <h2>
+        Введите имя пациента
+    </h2>
+    <form action="" method="POST">
+        <label for="pac">Введите имя пациента</label>
+        <input name="pac_name" id="pac" type="text" placeholder="Имя пациента">
+        <input type="submit" value="Send">
+    </form>
+</center>
+<h4 align = center> <a href="{{url_for('bp_report.start_report')}}"> Нажмите для возврата в меню запросов</a> </h4>
+
+</body>
+</html>

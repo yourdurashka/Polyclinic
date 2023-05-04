@@ -1,0 +1,1 @@
+select count(*) from visit where year(date_visit) = '$Byear' and month(date_visit) = '$Bmonth' and name_doc = '$Dname'

@@ -1,0 +1,31 @@
+{% macro render_item(item, show_form=False, show_amount=False) %}
+<div style="border-style: solid; border-color: black; margin: 5px">
+    <p>
+        <span style="color: black"> Имя врача: </span>
+        <span style="color: green"> {{ item['doc_name'] }} </span>
+        <span style="color: black"> Специальность: </span>
+        <span style="color: green"> {{ item['spec'] }} </span>
+        <br><br>
+        <span style="color: black"> Дата записи: </span>
+        <span style="color: green"> {{ item['date_visit'] }} </span>
+        {% if show_amount %}
+        <span style="color: black"> Время записи: </span>
+        <span style="color: green"> {{ item['input_time'] }} </span>
+        {% endif %}
+    </p>
+    {% if show_form %}
+    <div>
+        <form action="" method="post">
+            <input type="hidden" name="id_doc" value="{{ item['id_doc'] }}">
+            <input type="submit" name = "input_time" value="10:00" placeholder = "Время приема">
+            <input type="submit" name = "input_time" value="12:00" placeholder = "Время приема">
+            <input type="submit" name = "input_time" value="14:00" placeholder = "Время приема">
+            <input type="submit" name = "input_time" value="16:00" placeholder = "Время приема">
+            <br><br>
+<!--            <input type="submit" name="action" value="Запись">-->
+
+        </form>
+    </div>
+    {% endif %}
+</div>
+{% endmacro %}

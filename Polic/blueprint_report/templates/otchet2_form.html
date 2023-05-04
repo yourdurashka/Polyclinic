@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет №2</title>
+    <link type="text/css" rel="stylesheet" href="static/sem2.css">
+</head>
+<body>
+<center>
+    <h2>
+        Введите дату, чтобы просмотреть приемы в этот день
+    </h2>
+    <form action="" method="POST">
+        <label for="otchet1">Введите дату</label>
+        <input name="input_data" id="otchet2" type="text" placeholder="Дата в формате:YYYY-MM-DD">
+        <input type="submit" value="Send">
+    </form>
+</center>
+<h4 align = center> <a href="{{url_for('bp_report.start_report')}}"> Нажмите для возврата в меню запросов</a> </h4>
+
+</body>
+</html>

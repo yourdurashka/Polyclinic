@@ -1,0 +1,1 @@
+select pac_name, passport, address from paclent where id_pac='$user_id'

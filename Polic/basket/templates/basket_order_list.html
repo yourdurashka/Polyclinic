@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask project</title>
+<!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<div align = center>
+    <br><br>
+    <a href = "{{url_for('bp_order.save_order')}}"> Оформить запись</a> <br><br>
+    <table border =1 width = 80% align="center">
+    <tr>
+    {% for column in schema %}
+    <td class="table-title" align="center">{{column}}</td>
+    {% endfor %}
+    </tr>
+    {% for line in result %}
+    <tr>
+        {%for column in line%}
+        <td align="center">{{column}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+    <a href = "{{url_for('menu_choice')}}"> Вернуться в меню пользователя</a>
+</div>
+
+{% import 'basket_utils.html' as utils %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Врачи</h2>
+            {% if items %}
+            {% for item in items %}
+                {{ utils.render_item(item, show_form=True, show_amount=False) }}
+            {% endfor %}
+            {% else %}
+                <p> Нет доступных записей на прием</p>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <h2 style="color:Blue">Ваши записи</h2>
+            <a href="{{url_for('bp_order.clear_basket')}}" style="color:green">Очистить запись</a>
+            {% if basket %}
+            {% for key in basket %}
+                {{ utils.render_item(basket[key], show_form=False, show_amount=True) }}
+            {% endfor %}
+            {% else %}
+                <p> Нет записей</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
